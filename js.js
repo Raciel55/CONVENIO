@@ -229,6 +229,7 @@ function seleccionarEmpresa() {
     let inputSaul = document.getElementById('saul')
     let inputRuta58 = document.getElementById('ruta-58')
     let inputApaxtle = document.getElementById('apaxtle')
+    let inputExcelencia = document.getElementById('excelencia')
 
 
     var array = [];
@@ -244,6 +245,9 @@ function seleccionarEmpresa() {
 
     if (inputApaxtle.checked) {
         array[0] = "MARIA DEL PILAR ESPERILLA PORRAS"; array[1] = array[0]; array[2] = 'UNION DE TAXISTAS Y TRANSPORTE COLECTIVO APAXTLE, S.A. DE C.V.'; array[3] = 'ESPRPL62021215M500'; array[4] = '11,195'; array[5] = '10 DE DICIEMBRE DEL 2003'
+    }
+    if (inputExcelencia.checked) {
+        array[0] = "LUIS SALGADO URBAN"; array[1] = array[0]; array[2] = '"EXCELENCIA EN EL TRANSPORTE DE ALQUILER DEL ESTADO DE MEXICO, S.A. DE C.V.'; array[3] = 'SLURLS94110715H900'; array[4] = '22,082'; array[5] = '15 DE ENERO DE 2024'
     }
     if (inputSaul.checked) {
         array[0] = "SAUL IGNACIO OSORIO DELGADO"; array[1] = array[0]; array[2] = 'TRANSPORTES MEXICO GUADALUPE VICTORIA SAN PABLO Y ANEXAS, S.A. DE C.V.'; array[3] = 'OSDLSL87042209H100'; array[4] = '30,938'; array[5] = '03 DE MAYO DE 2023'
