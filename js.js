@@ -233,6 +233,7 @@ function seleccionarEmpresa(){
     let inputRuta58 = document.getElementById('ruta-58')
     let inputApaxtle = document.getElementById('apaxtle')
     let inputChupas = document.getElementById('chupas')
+    let inputExcelencia = document.getElementById('excelencia')
 
 
 
@@ -254,6 +255,9 @@ function seleccionarEmpresa(){
      }
     if(inputSemesa.checked){
         array[0] = "WENDY GOMEZ GONZALEZ"; array[1] = array[0]; array[2] = 'SERVICIOS METROPOLITANOS DE EXCELENCIA, S.A. DE C.V.';array[3] = 'GMGNWN84101209M700'; array[4] = '362'; array[5] = '17 DE JULIO DEL 2019'
+     }
+    if(inputExcelencia.checked){
+        array[0] = "LUIS SALGADO URBAN"; array[1] = array[0]; array[2] = 'EXCELENCIA EN EL TRANSPORTE DE ALQUILER DEL ESTADO DE MEXICO, S.A. DE C.V.';array[3] = 'SLURLS94110715H900'; array[4] = '22,082'; array[5] = '15 DE ENERO DE 2024'
      }
     if(inputQuiroz36.checked){
         array[0] = "ROBERTO QUIROZ DIAZ"; array[1] = array[0]; array[2] = 'TRANSPORTES CHALCO 36, S.A. DE C.V.';array[3] = 'ORDZP855061815H600'; array[4] = '5,791'; array[5] = '13 DE AGOSTO DE 2020'
