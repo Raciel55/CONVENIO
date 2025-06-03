@@ -2,13 +2,13 @@ function iniciarPrograma() {
     window.addEventListener("beforeunload", function (e) {
         // Mensaje de advertencia
         var mensaje = "¿Estás seguro de que quieres salir de esta página?";
-        
+
         // Algunos navegadores ignoran el mensaje personalizado, pero el evento evitará el cierre
         e.preventDefault();
-        
+
         // Definir el mensaje en la propiedad returnValue del evento (requerido por algunos navegadores)
         e.returnValue = mensaje;
-    
+
         // Devolver el mensaje (obsoleto en algunos navegadores)
         return mensaje;
     });
@@ -20,7 +20,7 @@ function iniciarPrograma() {
     let botonPersona = document.getElementById('seleccionar-persona');
     botonPersona.addEventListener('click', seleccionarPersona);
 
-    document.getElementById('section-imprimir').style.display='none'
+    document.getElementById('section-imprimir').style.display = 'none'
 
     let sectionBotones = document.getElementById('conocidos');
     sectionBotones.style.display = 'none';
@@ -51,46 +51,41 @@ function iniciarPrograma() {
 
     // Asignar el event listener al botón "Atrás"
     let botonAtras = document.getElementById('atras');
-    botonAtras.addEventListener('click', function() {
+    botonAtras.addEventListener('click', function () {
         // Ocultar la sección actual y mostrar la anterior
         document.getElementById('ingresar-datos').style.display = 'none';
         document.getElementById('fisica-moral').style.display = 'block';
     });
 
     let botonAtrasEmpresa = document.getElementById('atras-empresa')
-    botonAtrasEmpresa.addEventListener('click',function()
-    {
+    botonAtrasEmpresa.addEventListener('click', function () {
         document.getElementById('fisica-moral').style.display = 'block'
         document.getElementById('conocidos').style.display = 'none'
     }
     )
     let botonAtrasTerminar = document.getElementById('atras-terminar')
-    botonAtrasTerminar.addEventListener('click',function()
-    {
+    botonAtrasTerminar.addEventListener('click', function () {
         let inputFisica = document.getElementById('fisica')
         let inputMoral = document.getElementById('moral')
 
-        if(inputFisica.checked)
-        {
+        if (inputFisica.checked) {
             document.getElementById('ingresar-datos').style.display = 'block'
             document.getElementById('ingresar-datos-vehiculo').style.display = 'none'
         }
-        else if(inputMoral.checked)
-        {
+        else if (inputMoral.checked) {
             document.getElementById('conocidos').style.display = 'block'
             document.getElementById('ingresar-datos-vehiculo').style.display = 'none'
         }
     }
     )
     let botonModificar = document.getElementById('modificar')
-    botonModificar.addEventListener('click',function()
-    {
-        document.getElementById('predet').style.display='none'
-        document.getElementById('predet-fisica').style.display='none'
-        document.getElementById('predet-moral').style.display='none'
-        document.getElementById('predet-2').style.display='none'
-        document.getElementById('section-imprimir').style.display='none'
-        document.getElementById('ingresar-datos-vehiculo').style.display='block'
+    botonModificar.addEventListener('click', function () {
+        document.getElementById('predet').style.display = 'none'
+        document.getElementById('predet-fisica').style.display = 'none'
+        document.getElementById('predet-moral').style.display = 'none'
+        document.getElementById('predet-2').style.display = 'none'
+        document.getElementById('section-imprimir').style.display = 'none'
+        document.getElementById('ingresar-datos-vehiculo').style.display = 'block'
     })
 }
 function escucharFisica() {
@@ -196,31 +191,33 @@ function convenio() {
     sectionIngresarDatosVehiculo.style.display = 'block';
 
     let botonSiguiente = document.getElementById('terminar');
-    botonSiguiente.addEventListener('click',terminarConvenio);
+    botonSiguiente.addEventListener('click', terminarConvenio);
 }
 
-function seleccionarEmpresa(){
+function seleccionarEmpresa() {
     //Buscar dentro del documento las posibles personas a las que se hará un convenio
-    let inputMartin  =document.getElementById('martin')
+    let inputMartin = document.getElementById('martin')
     let inputSergio = document.getElementById('sergio')
     let inputSemesa = document.getElementById('semesa')
     let inputAdolfo = document.getElementById('adolfo')
     let inputMiguel = document.getElementById('miguel')
+    let input = document.getElementById('')
     let inputRafa = document.getElementById('rafa')
     let inputAdministradora = document.getElementById('administradora')
+    let inputIxtacala = document.getElementById('ixtacala')
     let inputBasurto = document.getElementById('basurto')
     let inputOtros = document.getElementById('otros')
     let inputRay = document.getElementById('ray')
     let inputElba = document.getElementById('elba')
     let inputIzcalli = document.getElementById('izcalli')
-    let inputRinconVerde  = document.getElementById('rincon-verde')
+    let inputRinconVerde = document.getElementById('rincon-verde')
     let inputAcatlan = document.getElementById('acatlan')
     let inputCureno = document.getElementById('cureno')
     let inputMT = document.getElementById('mt')
     let inputMario = document.getElementById('mario')
     let inputSantos = document.getElementById('santos')
     let inputLety = document.getElementById('lety')
-    let inputQuiroz36 = document.getElementById('quiroz-36')    
+    let inputQuiroz36 = document.getElementById('quiroz-36')
     //Buscar aquellos datos a modificar en cada caso
     let inputNombre = document.getElementById('nombre')
     let inputNombre2 = document.getElementById('nombre-2')
@@ -232,89 +229,94 @@ function seleccionarEmpresa(){
     let inputSaul = document.getElementById('saul')
     let inputRuta58 = document.getElementById('ruta-58')
     let inputApaxtle = document.getElementById('apaxtle')
-    let inputChupas = document.getElementById('chupas')
-
+    let inputExcelencia = document.getElementById('excelencia')
 
 
     var array = [];
-    if(inputSergio.checked){
-       array[0] = "LUIS SERGIO BALCAZAR GARCIA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES ESTRELLA DEL VALLE DE MEXICO, S.A. DE C.V.';array[3] = 'BLGRLS67100709H200'; array[4] = '20,876'; array[5] = '24 DE AGOSTO DEL 2022'
+    if (inputSergio.checked) {
+        array[0] = "LUIS SERGIO BALCAZAR GARCIA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES ESTRELLA DEL VALLE DE MEXICO, S.A. DE C.V.'; array[3] = 'BLGRLS67100709H200'; array[4] = '20,876'; array[5] = '24 DE AGOSTO DEL 2022'
     }
-    if(inputChupas.checked){
-       array[0] = "JUAN FERNANDO ALVAREZ MENESES"; array[1] = array[0]; array[2] = 'SAN RAFAEL CHAMAPA CORPORATIVO DE TRANSPORTE EJECUTIVO SRCCTE, S.A. DE C.V.';array[3] = 'ALMNJN77053009H100'; array[4] = '1,100'; array[5] = '03 DE NOVIEMBRE DEL 2022'
+    if (inputSergio.checked) {
+        array[0] = "LUIS SERGIO BALCAZAR GARCIA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES ESTRELLA DEL VALLE DE MEXICO, S.A. DE C.V.'; array[3] = 'BLGRLS67100709H200'; array[4] = '20,876'; array[5] = '24 DE AGOSTO DEL 2022'
     }
-    if(inputApaxtle.checked){
-        array[0] = "MARIA DEL PILAR ESPERILLA PORRAS"; array[1] = array[0]; array[2] = 'UNION DE TAXISTAS Y TRANSPORTE COLECTIVO APAXTLE, S.A. DE C.V.';array[3] = 'ESPRPL62021215M500'; array[4] = '11,195'; array[5] = '10 DE DICIEMBRE DEL 2003'
-     }
-    if(inputSaul.checked){
-        array[0] = "SAUL IGNACIO OSORIO DELGADO"; array[1] = array[0]; array[2] = 'TRANSPORTES MEXICO GUADALUPE VICTORIA SAN PABLO Y ANEXAS, S.A. DE C.V.';array[3] = 'OSDLSL87042209H100'; array[4] = '30,938'; array[5] = '03 DE MAYO DE 2023'
-     }
-     if(inputRuta58.checked){
-        array[0] = "EDGAR JOSE LUIS GARCIA CEDILLO"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES EL CAPULIN RUTA 58, S.A. DE C.V.';array[3] = 'GRCDED71070909H000'; array[4] = '29,846'; array[5] = '14 DE MAYO DEL 2019'
-     }
-    if(inputSemesa.checked){
-        array[0] = "WENDY GOMEZ GONZALEZ"; array[1] = array[0]; array[2] = 'SERVICIOS METROPOLITANOS DE EXCELENCIA, S.A. DE C.V.';array[3] = 'GMGNWN84101209M700'; array[4] = '362'; array[5] = '17 DE JULIO DEL 2019'
-     }
-    if(inputQuiroz36.checked){
-        array[0] = "ROBERTO QUIROZ DIAZ"; array[1] = array[0]; array[2] = 'TRANSPORTES CHALCO 36, S.A. DE C.V.';array[3] = 'ORDZP855061815H600'; array[4] = '5,791'; array[5] = '13 DE AGOSTO DE 2020'
-     }
-    if(inputIzcalli.checked){
-        array[0] = "JULIO CESAR MOYA LUNA"; array[1] = array[0]; array[2] = 'SITIO DE TAXIS Y RADIO TAXIS DE IZCALLI DEL RIO, S.A. DE C.V.'; array[3] = 'MYLNJL71041213H100'; array[4] = '23,683'; array[5] = '01 DE MARZO DEL 2024'                
+    if(inputIxtacala.checked){
+        array[0] = "RAUL ROJAS HERNANDEZ"; array[1] = array[0]; array[2] = 'SERVITAXIS-IZTACALA, S.A. DE C.V.';array[3] = 'RJHRRL80100309H700'; array[4] = '18,129'; array[5] = '05 DE JUNIO DEL 2015'
     }
-    if(inputVm.checked){
-        array[0] = "ISRAEL GONZALEZ ROSAS"; array[1] = array[0]; array[2] = 'AUTOBUSES DEL VALLE DE MEXICO, S.A. DE C.V.';array[3] = 'GNRSIS73112809H701'; array[4] = '24,490'; array[5] = '04 DE ABRIL DE 2024'
+
+    if (inputApaxtle.checked) {
+        array[0] = "MARIA DEL PILAR ESPERILLA PORRAS"; array[1] = array[0]; array[2] = 'UNION DE TAXISTAS Y TRANSPORTE COLECTIVO APAXTLE, S.A. DE C.V.'; array[3] = 'ESPRPL62021215M500'; array[4] = '11,195'; array[5] = '10 DE DICIEMBRE DEL 2003'
     }
-    if(inputLety.checked){
-        array[0] = "LETICIA ZARATE RIVERA"; array[1] = array[0]; array[2] = 'BLOQUE DE AGRUPACIONES DE RENOVACION, S.A. DE C.V.';array[3] = 'ZRRVLT79010321M700'; array[4] = '19,572'; array[5] = '02 DE JUNIO DEL 2021'
+    if (inputExcelencia.checked) {
+        array[0] = "LUIS SALGADO URBAN"; array[1] = array[0]; array[2] = '"EXCELENCIA EN EL TRANSPORTE DE ALQUILER DEL ESTADO DE MEXICO, S.A. DE C.V.'; array[3] = 'SLURLS94110715H900'; array[4] = '22,082'; array[5] = '15 DE ENERO DE 2024'
     }
-    if(inputSantos.checked){
-        array[0] = "JOSE SANTOS REYES GASPAR"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTISTAS Y CONCESIONARIOS DEL ESTADO DE MEXICO RUTA 82 ANDEN "U" CUATRO CAMINOS Y RAMALES, S.A. DE C.V.';array[3] = 'RYGSSN68110109H800'; array[4] = '59,352'; array[5] = '18 DE SEPTIEMBRE DEL 2018'
+    if (inputSaul.checked) {
+        array[0] = "SAUL IGNACIO OSORIO DELGADO"; array[1] = array[0]; array[2] = 'TRANSPORTES MEXICO GUADALUPE VICTORIA SAN PABLO Y ANEXAS, S.A. DE C.V.'; array[3] = 'OSDLSL87042209H100'; array[4] = '30,938'; array[5] = '03 DE MAYO DE 2023'
+    }
+    if (inputRuta58.checked) {
+        array[0] = "EDGAR JOSE LUIS GARCIA CEDILLO"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES EL CAPULIN RUTA 58, S.A. DE C.V.'; array[3] = 'GRCDED71070909H000'; array[4] = '29,846'; array[5] = '14 DE MAYO DEL 2019'
+    }
+    if (inputSemesa.checked) {
+        array[0] = "WENDY GOMEZ GONZALEZ"; array[1] = array[0]; array[2] = 'SERVICIOS METROPOLITANOS DE EXCELENCIA, S.A. DE C.V.'; array[3] = 'GMGNWN84101209M700'; array[4] = '362'; array[5] = '17 DE JULIO DEL 2019'
+    }
+    if (inputQuiroz36.checked) {
+        array[0] = "ROBERTO QUIROZ DIAZ"; array[1] = array[0]; array[2] = 'TRANSPORTES CHALCO 36, S.A. DE C.V.'; array[3] = 'ORDZP855061815H600'; array[4] = '5,791'; array[5] = '13 DE AGOSTO DE 2020'
+    }
+    if (inputIzcalli.checked) {
+        array[0] = "JULIO CESAR MOYA LUNA"; array[1] = array[0]; array[2] = 'SITIO DE TAXIS Y RADIO TAXIS DE IZCALLI DEL RIO, S.A. DE C.V.'; array[3] = 'MYLNJL71041213H100'; array[4] = '23,683'; array[5] = '01 DE MARZO DEL 2024'
+    }
+    if (inputVm.checked) {
+        array[0] = "ISRAEL GONZALEZ ROSAS"; array[1] = array[0]; array[2] = 'AUTOBUSES DEL VALLE DE MEXICO, S.A. DE C.V.'; array[3] = 'GNRSIS73112809H701'; array[4] = '24,490'; array[5] = '04 DE ABRIL DE 2024'
+    }
+    if (inputLety.checked) {
+        array[0] = "LETICIA ZARATE RIVERA"; array[1] = array[0]; array[2] = 'BLOQUE DE AGRUPACIONES DE RENOVACION, S.A. DE C.V.'; array[3] = 'ZRRVLT79010321M700'; array[4] = '19,572'; array[5] = '02 DE JUNIO DEL 2021'
+    }
+    if (inputSantos.checked) {
+        array[0] = "JOSE SANTOS REYES GASPAR"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTISTAS Y CONCESIONARIOS DEL ESTADO DE MEXICO RUTA 82 ANDEN "U" CUATRO CAMINOS Y RAMALES, S.A. DE C.V.'; array[3] = 'RYGSSN68110109H800'; array[4] = '59,352'; array[5] = '18 DE SEPTIEMBRE DEL 2018'
     }
     //fecha
-    if(inputMario.checked){
-        array[0] = "MARIO RIZO LOPEZ"; array[1] = array[0]; array[2] = 'TRANSPORTES TERRESTRES CON ENLACE AL DISTRITO FEDERAL, S.A. DE C.V.';array[3] = 'RZLPMR68081709H600'; array[4] = '21,341'; array[5] = ''
+    if (inputMario.checked) {
+        array[0] = "MARIO RIZO LOPEZ"; array[1] = array[0]; array[2] = 'TRANSPORTES TERRESTRES CON ENLACE AL DISTRITO FEDERAL, S.A. DE C.V.'; array[3] = 'RZLPMR68081709H600'; array[4] = '21,341'; array[5] = ''
     }
-    if(inputMT.checked){
+    if (inputMT.checked) {
         array[0] = "JORGE ENRIQUEZ GONZALEZ"; array[1] = array[0]; array[2] = 'LINEA MEXICO TACUBA HUIXQUILUCAN Y ANEXAS, S.A. DE C.V.'; array[3] = 'ENGNJR50041809H700'; array[4] = '2,029'; array[5] = '03 DE JUNIO DE 2015'
     }
     //fecha
-    if(inputCureno.checked){
-        array[0] = "JAIME ALFREDO CUREÑO MUÑOZ"; array[1] = array[0]; array[2] = 'RADIO TAXI SAN ISIDRO, S.A. DE C.V.'; array[3] = 'CRMZ3M51092709H000'; array[4] = '30,887'; array[5] = ''        
+    if (inputCureno.checked) {
+        array[0] = "JAIME ALFREDO CUREÑO MUÑOZ"; array[1] = array[0]; array[2] = 'RADIO TAXI SAN ISIDRO, S.A. DE C.V.'; array[3] = 'CRMZ3M51092709H000'; array[4] = '30,887'; array[5] = ''
     }
     //fecha
-    if(inputAdolfo.checked){
-        array[0] = "JOSE ALFREDO RAMIREZ ZUÑIGA"; array[1] = array[0]; array[2] = 'TRANSPORTISTAS COLECTIVOS ADOLFO LOPEZ MATEOS, HUIXQUILUCAN TOREO, S.A. DE C.V.'; array[3] = 'RMZGAL68060709H300'; array[4] = '32,333'; array[5] = ''                
+    if (inputAdolfo.checked) {
+        array[0] = "JOSE ALFREDO RAMIREZ ZUÑIGA"; array[1] = array[0]; array[2] = 'TRANSPORTISTAS COLECTIVOS ADOLFO LOPEZ MATEOS, HUIXQUILUCAN TOREO, S.A. DE C.V.'; array[3] = 'RMZGAL68060709H300'; array[4] = '32,333'; array[5] = ''
     }
-    if(inputMartin.checked){
-        array[0] = "MARTIN GUTIERREZ MILLA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES MIR DE SAN ANTONIO TULTITLAN, S.A. DE C.V.'; array[3] = 'GTMLMR82092609H900'; array[4] = '20,206'; array[5] = '18 DE JULIO DE 2015'                
+    if (inputMartin.checked) {
+        array[0] = "MARTIN GUTIERREZ MILLA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES MIR DE SAN ANTONIO TULTITLAN, S.A. DE C.V.'; array[3] = 'GTMLMR82092609H900'; array[4] = '20,206'; array[5] = '18 DE JULIO DE 2015'
     }
-    if(inputAcatlan.checked){
-        array[0] = "LUIS ROBERTO GONZALEZ HUERTA"; array[1] = array[0]; array[2] = 'ASOCIACION DE PROPIETARIOS, OPERADORES Y AUTOTRANSPORTISTAS DE ACATLAN, S.A. DE C.V.'; array[3] = 'GNHRLS63061515H500'; array[4] = '28,092'; array[5] = '18 DE JULIO DE 2015'                
+    if (inputAcatlan.checked) {
+        array[0] = "LUIS ROBERTO GONZALEZ HUERTA"; array[1] = array[0]; array[2] = 'ASOCIACION DE PROPIETARIOS, OPERADORES Y AUTOTRANSPORTISTAS DE ACATLAN, S.A. DE C.V.'; array[3] = 'GNHRLS63061515H500'; array[4] = '28,092'; array[5] = '18 DE JULIO DE 2015'
     }
-    //fecha
-    if(inputIzcalli.checked){
-        array[0] = "JULIO CESAR MOYA LUNA"; array[1] = array[0]; array[2] = 'SITIO DE TAXIS Y RADIO TAXIS DE IZCALLI DEL RIO, S.A. DE C.V.'; array[3] = 'MYLNJL71041213H100'; array[4] = '23,683'; array[5] = '01 DE MARZO DEL 2024'                
+    if (inputIzcalli.checked) {
+        array[0] = "JULIO CESAR MOYA LUNA"; array[1] = array[0]; array[2] = 'SITIO DE TAXIS Y RADIO TAXIS DE IZCALLI DEL RIO, S.A. DE C.V.'; array[3] = 'MYLNJL71041213H100'; array[4] = '23,683'; array[5] = '01 DE MARZO DEL 2024'
     }
-    if(inputRinconVerde.checked){
-        array[0] = "MIGUEL CARLOS ROMERO LUCAS"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES DEL CENTRO DE NAUCALPAN, S.A. DE C.V.'; array[3] = 'RMLCMG42092915H400'; array[4] = '58,502'; array[5] = '22 DE JUNIO DEL 2017'                
+    if (inputRinconVerde.checked) {
+        array[0] = "MIGUEL CARLOS ROMERO LUCAS"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES DEL CENTRO DE NAUCALPAN, S.A. DE C.V.'; array[3] = 'RMLCMG42092915H400'; array[4] = '58,502'; array[5] = '22 DE JUNIO DEL 2017'
     }
-    if(inputRafa.checked){
-        array[0] = "RAUL RAFAEL MUCIÑO ROJAS"; array[1] = array[0]; array[2] = 'RUTA 09 ASOCIACION DE PROPIETARIOS Y AUTOTRANSPORTES DE AGUA BENDITA HUIXQUILUCAN GRUPO VALLE DE MEXICO, S.A. DE C.V.'; array[3] = 'MCRJRL68061115H400'; array[4] = '62,483'; array[5] = '11 DE NOVIEMBRE DEL 2020'                
+    if (inputRafa.checked) {
+        array[0] = "RAUL RAFAEL MUCIÑO ROJAS"; array[1] = array[0]; array[2] = 'RUTA 09 ASOCIACION DE PROPIETARIOS Y AUTOTRANSPORTES DE AGUA BENDITA HUIXQUILUCAN GRUPO VALLE DE MEXICO, S.A. DE C.V.'; array[3] = 'MCRJRL68061115H400'; array[4] = '62,483'; array[5] = '11 DE NOVIEMBRE DEL 2020'
     }
-    if(inputMiguel.checked){
-        array[0] = "MIGUEL ANGEL RODRIGUEZ CORTES"; array[1] = array[0]; array[2] = 'TRANSPORTES URBANOS Y SUBURBANOS DE SAN ANTONIO TULTITLAN, S.A. DE C.V.'; array[3] = 'RDCRMG69021809H800'; array[4] = '4,502'; array[5] = '11 DE SEPTIEMBRE DEL 2020'                   
+    if (inputMiguel.checked) {
+        array[0] = "MIGUEL ANGEL RODRIGUEZ CORTES"; array[1] = array[0]; array[2] = 'TRANSPORTES URBANOS Y SUBURBANOS DE SAN ANTONIO TULTITLAN, S.A. DE C.V.'; array[3] = 'RDCRMG69021809H800'; array[4] = '4,502'; array[5] = '11 DE SEPTIEMBRE DEL 2020'
     }
-    if(inputAdministradora.checked){
-        array[0] = "JORGE MOLINA MATRINTEZ"; array[1] = array[0]; array[2] = 'ADMINISTRADORA DE TRANSPORTE INDEPENDIENTE, S.A. DE C.V.'; array[3] = 'MLMRJR74042315H401'; array[4] = '21,889'; array[5] = '02 DE AGOSTO DEL 2018'                   
+    if (inputAdministradora.checked) {
+        array[0] = "JORGE MOLINA MATRINTEZ"; array[1] = array[0]; array[2] = 'ADMINISTRADORA DE TRANSPORTE INDEPENDIENTE, S.A. DE C.V.'; array[3] = 'MLMRJR74042315H401'; array[4] = '21,889'; array[5] = '02 DE AGOSTO DEL 2018'
     }
-    if(inputBasurto.checked){
-        array[0] = "JAVIER GUADALUPE BASURTO MONTOYA"; array[1] = array[0]; array[2] = 'A.C.P.T.A. RUTA 27 II MIGUEL HIDALGO, S.A. DE C.V.'; array[3] = 'BSMNJV581212H700'; array[4] = '68,598'; array[5] = '24 DE NOVIEMBRE DEL 2017'                            
+    if (inputBasurto.checked) {
+        array[0] = "JAVIER GUADALUPE BASURTO MONTOYA"; array[1] = array[0]; array[2] = 'A.C.P.T.A. RUTA 27 II MIGUEL HIDALGO, S.A. DE C.V.'; array[3] = 'BSMNJV581212H700'; array[4] = '68,598'; array[5] = '24 DE NOVIEMBRE DEL 2017'
     }
-    if(inputRay.checked){
-        array[0] = "RAYMUNDO DAVID BENITEZ CRUZ"; array[1] = array[0]; array[2] = 'TRANSPORTES EN NEZAHUALCOYOTL PERLA-REFORMA, S.A. DE C.V.'; array[3] = 'BNCRRY59122909H580'; array[4] = '123,129'; array[5] = '29 DE MARZO DEL 2022'                            
+    if (inputRay.checked) {
+        array[0] = "RAYMUNDO DAVID BENITEZ CRUZ"; array[1] = array[0]; array[2] = 'TRANSPORTES EN NEZAHUALCOYOTL PERLA-REFORMA, S.A. DE C.V.'; array[3] = 'BNCRRY59122909H580'; array[4] = '123,129'; array[5] = '29 DE MARZO DEL 2022'
     }
-    if(inputElba.checked){
-        array[0] = "MANUEL RICARDO RODRIGUEZ MORALES"; array[1] = array[0]; array[2] = 'TRANSPORTES DE ALQUILER DE MEXICO Y ANEXOS DE CUAUTITLAN, S.A. DE C.V.'; array[3] = 'RDMRMN72060109H900'; array[4] = '17,456'; array[5] = '16 DE MAYO DEL 2023'                            
+    if (inputElba.checked) {
+        array[0] = "MANUEL RICARDO RODRIGUEZ MORALES"; array[1] = array[0]; array[2] = 'TRANSPORTES DE ALQUILER DE MEXICO Y ANEXOS DE CUAUTITLAN, S.A. DE C.V.'; array[3] = 'RDMRMN72060109H900'; array[4] = '17,456'; array[5] = '16 DE MAYO DEL 2023'
     }
     //Asignar dependiendo la persona cada dato del array al convenio
     inputNombre.innerHTML = array[0]; inputNombre2.innerHTML = array[1]; inputEmpresa.innerHTML = array[2]; inputClave.innerHTML = array[3]; inputPoder.innerHTML = array[4]; inputFechaPoder.innerHTML = array[5];
@@ -326,9 +328,9 @@ function seleccionarEmpresa(){
     sectionIngresarDatosVehiculo.style.display = 'block'
 
     let botonTerminar = document.getElementById('terminar')
-    botonTerminar.addEventListener('click', terminarConvenio) 
+    botonTerminar.addEventListener('click', terminarConvenio)
 
-    if(inputOtros.checked) {
+    if (inputOtros.checked) {
         let sectionIngresarDatosVehiculo = document.getElementById('ingresar-datos-vehiculo')
         sectionIngresarDatosVehiculo.style.display = 'none'
 
@@ -346,9 +348,9 @@ function seleccionarEmpresa(){
     }
 }
 
-function terminarConvenio(){
+function terminarConvenio() {
     const date = new Date();
-    
+
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
@@ -382,12 +384,12 @@ function terminarConvenio(){
 
     serie.innerHTML = inputSerie
 
-    let inputMarca= document.getElementById("ingresar-marca").value.toUpperCase()
+    let inputMarca = document.getElementById("ingresar-marca").value.toUpperCase()
     let marca = document.getElementById("marca")
 
     marca.innerHTML = inputMarca
 
-    let inputSubmarca= document.getElementById("ingresar-submarca").value.toUpperCase()
+    let inputSubmarca = document.getElementById("ingresar-submarca").value.toUpperCase()
     let submarca = document.getElementById("submarca")
 
     submarca.innerHTML = inputSubmarca
@@ -396,7 +398,7 @@ function terminarConvenio(){
     let modelo = document.getElementById('modelo')
 
     mod = obtenerModelo(mod);
-    
+
     modelo.innerHTML = mod
 
     let sectionIngresarDatosVehiculo = document.getElementById('ingresar-datos-vehiculo')
@@ -413,11 +415,11 @@ function terminarConvenio(){
 
     let inputFisica = document.getElementById('fisica')
     let inputMoral = document.getElementById('moral')
-    if(inputMoral.checked){
+    if (inputMoral.checked) {
         let sectionPredetMoral = document.getElementById("predet-moral")
         sectionPredetMoral.style.display = 'block'
     }
-    if(inputFisica.checked){
+    if (inputFisica.checked) {
 
         let sectionPredetMoral = document.getElementById("predet-fisica")
         sectionPredetMoral.style.display = 'block'
@@ -428,23 +430,21 @@ function terminarConvenio(){
     document.getElementById('section-imprimir').style.display = 'block'
 
     let botonImprimir = document.getElementById('imprimir');
-    botonImprimir.addEventListener('click',function()
-    {
+    botonImprimir.addEventListener('click', function () {
         document.getElementById('section-imprimir').style.display = 'none'
         window.print();
     })
 
-    window.addEventListener('afterprint', function(){
+    window.addEventListener('afterprint', function () {
         document.getElementById('section-imprimir').style.display = 'block'
     })
-    window.removeEventListener('afterprint', function(){
+    window.removeEventListener('afterprint', function () {
         document.getElementById('section-imprimir').style.display = 'block'
     })
 }
 
-function obtenerNombreMes(month)
-{
-    var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+function obtenerNombreMes(month) {
+    var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
     switch (month) {
         case 1:
@@ -541,7 +541,7 @@ function obtenerModelo(mod) {
             }
             break;
     }
-    
+
     return modelos[index];
 }
 
