@@ -234,12 +234,16 @@ function seleccionarEmpresa(){
     let inputApaxtle = document.getElementById('apaxtle')
     let inputChupas = document.getElementById('chupas')
     let inputExcelencia = document.getElementById('excelencia')
+    let inputBetoNava = document.getElementById('beto-nava')
 
 
 
     var array = [];
     if(inputSergio.checked){
        array[0] = "LUIS SERGIO BALCAZAR GARCIA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES ESTRELLA DEL VALLE DE MEXICO, S.A. DE C.V.';array[3] = 'BLGRLS67100709H200'; array[4] = '20,876'; array[5] = '24 DE AGOSTO DEL 2022'
+    }
+    if(inputBetoNava.checked){
+       array[0] = "ROBERTO NAVA GALLARDO"; array[1] = array[0]; array[2] = 'SITIO SAN CRISTOBAL, A.C.';array[3] = 'NVGLRB71091609H200'; array[4] = '9,721'; array[5] = '15 DE OCTUBRE DE 2020'
     }
     if(inputChupas.checked){
        array[0] = "JUAN FERNANDO ALVAREZ MENESES"; array[1] = array[0]; array[2] = 'SAN RAFAEL CHAMAPA CORPORATIVO DE TRANSPORTE EJECUTIVO SRCCTE, S.A. DE C.V.';array[3] = 'ALMNJN77053009H100'; array[4] = '1,100'; array[5] = '03 DE NOVIEMBRE DEL 2022'
