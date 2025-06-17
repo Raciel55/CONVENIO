@@ -291,7 +291,7 @@ function seleccionarEmpresa(){
     }
     //fecha
     if(inputAdolfo.checked){
-        array[0] = "JOSE ALFREDO RAMIREZ ZUÑIGA"; array[1] = array[0]; array[2] = 'TRANSPORTISTAS COLECTIVOS ADOLFO LOPEZ MATEOS, HUIXQUILUCAN TOREO, S.A. DE C.V.'; array[3] = 'RMZGAL68060709H300'; array[4] = '32,333'; array[5] = ''                
+        array[0] = "JOSE ALFREDO RAMIREZ ZUÑIGA"; array[1] = array[0]; array[2] = 'TRANSPORTISTAS COLECTIVOS ADOLFO LOPEZ MATEOS, HUIXQUILUCAN TOREO, S.A. DE C.V.'; array[3] = 'RMZGAL68060709H300'; array[4] = '32,333'; array[5] = '23 DE ENERO DE 2020'                
     }
     if(inputMartin.checked){
         array[0] = "MARTIN GUTIERREZ MILLA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES MIR DE SAN ANTONIO TULTITLAN, S.A. DE C.V.'; array[3] = 'GTMLMR82092609H900'; array[4] = '20,206'; array[5] = '18 DE JULIO DE 2015'                
