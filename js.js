@@ -140,6 +140,9 @@ function convenio() {
     let nombre2 = document.getElementById('nombre-2');
     nombre2.innerHTML = inputNombre;
 
+    let nombreTabla = document.getElementById('nombre-tabla');
+    nombreTabla.innerHTML = inputNombre;
+
     let inputClave = document.getElementById('ingresar-clave').value.toUpperCase();
     let clave = document.getElementById('clave-fisica');
     let claveMoral = document.getElementById('clave');
@@ -375,11 +378,6 @@ function terminarConvenio(){
 
     concesion.innerHTML = inputConcesion
 
-    let inputModalidad = document.getElementById('ingresar-modalidad').value.toUpperCase()
-    let modalidad = document.getElementById('modalidad')
-
-    modalidad.innerHTML = inputModalidad
-
     let inputMunicipio = document.getElementById('ingresar-municipio-operacion').value.toUpperCase()
     let municipio = document.getElementById('municipio-2')
 
@@ -432,6 +430,8 @@ function terminarConvenio(){
 
         let sectionBlanco = document.getElementById('blanco')
         sectionBlanco.style.display = 'block'
+
+
     }
     document.getElementById('section-imprimir').style.display = 'block'
 
@@ -443,9 +443,6 @@ function terminarConvenio(){
     })
 
     window.addEventListener('afterprint', function(){
-        document.getElementById('section-imprimir').style.display = 'block'
-    })
-    window.removeEventListener('afterprint', function(){
         document.getElementById('section-imprimir').style.display = 'block'
     })
 }
