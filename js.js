@@ -206,6 +206,7 @@ function seleccionarEmpresa(){
     //Buscar dentro del documento las posibles personas a las que se hará un convenio
     let inputMartin  =document.getElementById('martin')
     let inputSergio = document.getElementById('sergio')
+    let inputChaparro = document.getElementById('chaparro')
     let inputSemesa = document.getElementById('semesa')
     let inputAdolfo = document.getElementById('adolfo')
     let inputMiguel = document.getElementById('miguel')
@@ -244,6 +245,9 @@ function seleccionarEmpresa(){
     var array = [];
     if(inputSergio.checked){
        array[0] = "LUIS SERGIO BALCAZAR GARCIA"; array[1] = array[0]; array[2] = 'AUTOTRANSPORTES ESTRELLA DEL VALLE DE MEXICO, S.A. DE C.V.';array[3] = 'BLGRLS67100709H200'; array[4] = '20,876'; array[5] = '24 DE AGOSTO DEL 2022'
+    }
+    if(inputChaparro.checked){
+        array[0] = "RICARDO CHAPARRO FLORES"; array[1] = array[0]; array[2] = 'SITIO AUTOTRANSPORTES NIÑOS HEROES Y FCO VILLA, S.A. DE C.V.';array[3] = 'CHFLRC62021009H600'; array[4] = '21,706'; array[5] = '15 DE SEPTIEMBRE DEL 2020'
     }
     if(inputBetoNava.checked){
        array[0] = "ROBERTO NAVA GALLARDO"; array[1] = array[0]; array[2] = 'GRUPO SANCRISTEX, S.A. DE C.V.';array[3] = 'NVGLRB71091609H200'; array[4] = '9,721'; array[5] = '15 DE OCTUBRE DE 2020'
